@@ -12,10 +12,24 @@
 
 		
 		<form method="post" action="mailto:youremail@email.com">
+			<!--
 			Nome:<input type="text" size="10" maxlength="40" name="name">
 			Senha: <input type="password" size="10" maxlength="10" name="password">
 
 			<input type="submit" name="Send">
+		-->
+		<p>Que tipo de sapatos você está usando?</p>
+		<label>Cor:</label><br>
+
+		<input type="radio" name="color" value="dark">Escuro<br>
+		<input type="radio" name="color" value="light">Claro<br>
+
+		<label>Tamanho:</label><br>
+		<input type="radio" name="size" value="S">Pequeno<br>
+		<input type="radio" name="size" value="N">Normal<br>
+		<input type="radio" name="size" value="G">Grande<br>
+
+		<input type="submit" name="email myself">
 
 		</form>
 		

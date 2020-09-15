@@ -4,103 +4,65 @@
 
 	<head>
 
-		<title>js04_Salario1.htm - aninhamento de if</title>
-		<meta http-equiv="Content-Type" content="text/html;">
+		<title>js04_switchCase - Selecao Multipla</title>
+		<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
 		<meta charset="utf-8">
 
 	</head>
 
 	<body>
+
+		<!-- Linha de comentário HTML: Definição do elemento formulário para a Entrada de Dados em HTML -->
+		<form name="formcalend" action="" method="post"> 
+
+			Digite o mês (01 a 12): <input type="text" name="f_mes" size="4" maxlength="2"><p></p>
+			<input type="button" name="btn_processar" value="Processar" onclick= "verificames()">
+			<input type="reset" name="btn_cancelar" value="Cancelar"><p></p>
+			O Mês corresponde é: <input type="text" name="f_nomemes" size="18" maxlength="15">
+
+		</form>
+
+
+
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
-			/* Objetivo: Calcular o salário líguido de um funcionário que trabalha por hora (horista).
-			- Para desenvolver o cálculo é nescessário ter as seguinter informações:
-				- Quantidade de horas trabalhadas no mês (js_qht)
-				- Valor da hora de trabalho (js_vht)
-				- Percentual de desconto do INSS (js_inss)
-			- Informar a classificação Salarial
-			- Objetos/Métodos utilizados:
-				esntrada: window.prompt
-				saída: document.write
+			/* Objetivo: Utilizando o recurso de seleção multipla - switch...case, pesquisar o nome do mês de referência através do 
+			respectivo número do mês informado.
+			- Objetivos/Métodos utilizados:
+			Entrada: document.form (entrada de daods via formulário)
+			Saída: document.form (Saída de dados via formulário)
+			- Importante:
+				Os campos do formulário seráo identificados com o prefixo f_ => Exemplo: f_mes
+				Os campos do JavaScript serão identificados com o prefixo js_ => Exemplo: js_mes
 			*/
 
 			/* Definição das variáveis */
-			var js_qht; //var de entrada - Quantidade de Horas Trabalhadas
-			var js_vht; // var de entrada - Valor de Horas trabalhadas
-			var js_inss; // Var de entrada - Percentual de Desconto INSS
-			var js_tdes; // Var de saída - Total de Descontos
-			var js_sb; // var de saída - Valor do Salário Bruto
-			var js_sl;	// Var de saída - Valor de Salário Liquído		
+			var js_mes;
+				
+			function verificames(){
+			/* Início da função verificames() para captura dos dados do formulário e pesquisa por seleção multipla*/
+			js_mes = parseInt(document.formcalend.f_mes.value);
 
-			/* Entrada de Dados */
-			js_qht= parseInt(window.prompt('Informe a Quantidade de horas trabalhadas/mês: (135 a 180) ', '00'));
-			js_vht= parseInt(window.prompt('Informe o Valorda hora trabalhada: (25 a 50)', '00'));
-			js_inss= parseInt(window.prompt('Informe o Percentualde desconto INSS: (5 a 15)', '00'));
+			/* Início da estrutura de Seleção switch...case*/
+			switch(js_mes){
+				case 1: document.formcalend.f_nomemes.value = 'Janeiro'; break
+				case 2: document.formcalend.f_nomemes.value = 'Fevereiro'; break
+				case 3: document.formcalend.f_nomemes.value = 'Março'; break
+				case 4: document.formcalend.f_nomemes.value = 'Abril'; break
+				case 5: document.formcalend.f_nomemes.value = 'Maio'; break
+				case 6: document.formcalend.f_nomemes.value = 'Junho'; break
+				case 7: document.formcalend.f_nomemes.value = 'Julho'; break
+				case 8: document.formcalend.f_nomemes.value = 'Agosto'; break
+				case 9: document.formcalend.f_nomemes.value = 'Setembro'; break
+				case 10: document.formcalend.f_nomemes.value = 'Outubro'; break
+				case 11: document.formcalend.f_nomemes.value = 'Novembro'; break
+				case 12: document.formcalend.f_nomemes.value = 'Dezembro'; break
+		default: document.formcalend.f_nomemes.value = '** Mês Inválido! ** '; break
 
-			/* Processamento de dados */
-			js_sb = js_vht * js_qht;
-			js_tdes = (js_inss/100) * js_sb;
-			js_sl = js_sb - js_tdes;
-
-
-
-			/* Saída de Dados com Consistencia de Valores*/
-			document.write('<p><b>DEMOSTRATIVO PARA CÁLCULO DO SALÁRIO LÍQUIDO</b> ');
-
-			document.write('<p>Quantidade de horas Trabalhadas (135 a 180) => <b>' + js_qht + '</b>');
-
-			if (js_qht > 180){
-				document.write('...(<b>Valor Máximo Exedido</b>)');
-			}
-			
-			if (js_qht < 135){
-				document.write('...(<b>Valor Mínimo Inválido</b>)');
-			}
-			
-			document.write('<p>Quantidade de hora Trabalhada (25 a 50) => <b>' + js_vht+ '</b>');
-
-			if (js_qht > 50){
-				document.write('...(<b>Valor Máximo Exedido</b>)');
-			}
-			
-			if (js_qht < 25){
-				document.write('...(<b>Valor Mínimo Inválido</b>)');
 			}
 
-			document.write('<p>Percentual de Desconto INSS (5 a 15) => <b>' + js_inss + '</b>');
-
-			if (js_qht > 15){
-				document.write('...(<b>Valor Máximo Exedido</b>)');
-			}
-			
-			if (js_qht < 5){
-				document.write('...(<b>Valor Mínimo Inválido</b>)');
-			}
-
-			document.write('<p>=============================================================');
-			document.write('<p><b>Salário Bruto = </b>' + js_sb);
-			document.write('<p><b>Total de Descontos INSS = </b>' + js_tdes);
-			document.write('<p><b>Salário LÍGUIDO = </b>' + js_sl);
-
-			/* Saída de Dados com Aninhamento de if */
-			if (js_sl > 10500){
-				document.write('...(<b>Salário Elevado! </b> maior que 10.500)');
-			}
-			else{
-				if (js_sl > 6000){
-				document.write('...(<b>Salário Satisfatório! </b> maior que 6.000)');
-				}
-				else{
-					if (js_sl > 3000){
-						document.write('...(<b>Salário Moderado! </b> Maior que 3.000)');
-					}
-					else{
-						document.write('...(<b>Salário Insatisfatório! </b> menor ou igual a 3.000)');
-					}
-				}
-			}	
-			
+		}	
 		</script>
 
 	</body>

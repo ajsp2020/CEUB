@@ -3,7 +3,7 @@
 
 	<head>
 
-		<title>js03_soma.htm - somatoria</title>
+		<title>js03_parsetInt - somatoria</title>
 
 		<!--Specifies the character encoding for the document-->
 		<!-- http -equiv attribute provides an HTTP header for the information/value of te content attribute-->
@@ -37,12 +37,12 @@
 			var js_n3;
 
 			/* Entrada de Dados */
-			js_n1 = window.prompt('Informe o primeiro número: ', 'Digite aqui');
-			js_n2 = window.prompt('Informe o segundo número: ', 'Digite aqui');
+			js_n1 = parseInt(window.prompt('Informe o primeiro número: ', 'Digite aqui'));
+			js_n2 = parseInt(window.prompt('Informe o segundo número: ', 'Digite aqui'));
 
 			/* Processamento de Dados */
 			/* a função parseInt() analisa um argumento string e retorna um inteiro na base*/
-			js_soma = parseInt(js_n1) + parseInt(js_n2);
+			js_soma = (js_n1) + (js_n2);
 
 			/* Saída de Dados */
 			/* tirei o character especial 01\u00e1 por falta de nescessidade*/

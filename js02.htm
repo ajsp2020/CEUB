@@ -3,13 +3,14 @@
 
 	<head>
 
-		<title>js03_comentario04.htm</title>
+		<title>js03_soma.htm - somatoria</title>
 
 		<!--Specifies the character encoding for the document-->
 		<!-- http -equiv attribute provides an HTTP header for the information/value of te content attribute-->
 		<!-- http-equiv attribute can be used to simulate an HTTP reponse header. -->
 		<!-- The content attribute gives the value associated with the http - equiv or name attribute -->
-		<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 		<meta charset="utf-8">
 
@@ -17,7 +18,7 @@
 
 	<body>
 
-		<h3>Programa de Boas Vindas!</h3>
+		<h3>Somatória de dois números inteiros</h3>
 
 		<script type="text/javascript">
 			<!--
@@ -25,22 +26,27 @@
 			utilizados para informar ao navegador a possibilidade de não executar os comandos que estiverem entre esses elementos, caso o browser não suporte o código javascript 
 			tive que colocar o text para os comentários*/
 			 
-			/* Objetivo: Capturar o nome do usuário e apresentar uma saudação personalizada 
-			Definir as variáveis com o prefixo js_
-			Para os elementos de Entrada: método prompt do objeto window
-			Para os elementos de saída: método write do objeto document.
+			/* Objetivo: Desenvolver um programa em JavaScript que faça a Leitura de 2 números inteiros e apresente o resultado da soma entre
+			eles. 
+
 			*/
 
 			/* Definição de Variáveis */
-			var js_nome;
+			var js_n1;
+			var js_n2;
+			var js_n3;
 
 			/* Entrada de Dados */
-			js_nome = window.prompt('Entre com seu nome: ', 'Digite seu nume nesta caixa');
+			js_n1 = window.prompt('Informe o primeiro número: ', 'Digite aqui');
+			js_n2 = window.prompt('Informe o segundo número: ', 'Digite aqui');
+
+			/* Processamento de Dados */
+			/* a função parseInt() analisa um argumento string e retorna um inteiro na base*/
+			js_soma = parseInt(js_n1) + parseInt(js_n2);
 
 			/* Saída de Dados */
-			document.write('Olá ' + js_nome + ' Seja Bem Vindo!')
-
-
+			/* tirei o character especial 01\u00e1 por falta de nescessidade*/
+			document.write('O Resultado da soma = ' + js_soma)
 
 		</script>
 

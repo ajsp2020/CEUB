@@ -3,7 +3,7 @@
 
 	<head>
 
-		<title>js03_parsetInt - somatoria</title>
+		<title>js03_funcao.htm - Somatória com Entrada de Dados por Formulário</title>
 
 		<!--Specifies the character encoding for the document-->
 		<!-- http -equiv attribute provides an HTTP header for the information/value of te content attribute-->
@@ -18,35 +18,51 @@
 
 	<body>
 
-		<h3>Somatória de dois números inteiros</h3>
+		<h3>Somatória de dois números inteiros com Convensão de Dados</h3>
 
-		<script type="text/javascript">
+		<!-- Definição da área e dos elementos de um Formulário -->
+		<form name="MeuFormulario" action=" " method="post">
+
+			Entre com o valor 1: <input type="text" name="f_n1"><p></p>
+			Entre com o valor 2: <input type="text" name="f_n2"><p></p>
+			<input type="button" name="btn_somar" value="Somar" onclick="soma()">
+			<input type="reset" name="btn_apagar" value="apagar">			
+
+		</form>
+		<!-- Final da área de um Formulário -->
+
+		<!-- Definição da linguagem JavaScript -->
+		<!-- The language attribute has been deprecated for a long time, and should not be used. -->
+		<script language="javascript">
 			<!--
-			/* <!-- //--> são idicadores de inicialização e de finalização do conteúdo das linhas de código JavaScript. São 
-			utilizados para informar ao navegador a possibilidade de não executar os comandos que estiverem entre esses elementos, caso o browser não suporte o código javascript 
-			tive que colocar o text para os comentários*/
-			 
-			/* Objetivo: Desenvolver um programa em JavaScript que faça a Leitura de 2 números inteiros e apresente o resultado da soma entre
-			eles. 
 
+			/* Objetivo: Desenvolver um programa em JavaScript que faça a leitura de 2 números inteiros 
+			aplique a conversão de valores com parsetInt e apresente o resultado da soma entre eles.
+			Entrada de Dados por Formulário.
 			*/
 
-			/* Definição de Variáveis */
+			/* Definição das Variáveis */
 			var js_n1;
 			var js_n2;
-			var js_n3;
+			var js_soma;
 
-			/* Entrada de Dados */
-			js_n1 = parseInt(window.prompt('Informe o primeiro número: ', 'Digite aqui'));
-			js_n2 = parseInt(window.prompt('Informe o segundo número: ', 'Digite aqui'));
+			/* Definição da função soma() para capturar dados, processar somatória e apresentar o resultado */
+			function soma(){
 
-			/* Processamento de Dados */
-			/* a função parseInt() analisa um argumento string e retorna um inteiro na base*/
-			js_soma = (js_n1) + (js_n2);
+				/* Entrada de Dados*/
 
-			/* Saída de Dados */
-			/* tirei o character especial 01\u00e1 por falta de nescessidade*/
-			document.write('O Resultado da soma = ' + js_soma)
+				js_n1 = parsetInt(document.MeuFormulario.f_n1.value);
+				js_n2 = parsetInt(document.MeuFormulario.f_n2.value);
+
+				/* Processamento de Dados */
+				js_soma = js_n1 + js_n2;
+
+				/* Saída de Dados */
+				/* str.toString() -> Return the value of a String object */
+				window.alert('Resultado da Somatória = ' + js_soma.toString());
+			}
+			
+			//-->
 
 		</script>
 

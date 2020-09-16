@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>js04_switchCase - Selecao Multipla</title>
+		<title>js04_while.htm - condicional while</title>
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
 		<meta charset="utf-8">
 
@@ -14,39 +14,21 @@
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
-			/* Objetivo: 
-				Exemplos práticos de aplicação com Operador Ternário: Operadores Relacionais e Expressão aritimética.
-				Utilização de sintaxe: (<condição>)? <expressão para resultado verdadeiro> : <expressão para resultado falso>
+			/* Objetivo: Escrever uma mensagem limitando-a em 10 vezes através de um contador que será incrementado de mais 1
+				
 			*/
 
 			/* Definição das variáveis */
-			document.write('<p>-------------------------------------------------...');
-			document.write('<p>DEFINIÇÃO E ATRIBUIÇÃO DE VARIÁVEIS:');
-			document.write('<p>var js_num = <b>30</b>; (js_num recebe valor 30)');
-			var js_num = 30;
+			var js_contador = 1;
 				
 			
-			/* Aplicação de Operados Ternário utilizando Operadores Relacionais*/
-			document.write('<p>-------------------------------------------------...');
-			document.write('<p>OPERADOR TERNÁRIO <b>(? :)</b> com OPRERADORES RELACIONAIS (==, !=, <):');
+			/* Laço de Repetição Condicional - while*/
+			while (js_contador <= 10){
+				document.write('<p>' + js_contador + '&ordf; Repetição de uma única linha de comando dentro de um laço condicional');
+				js_contador += 1;
+			}
 
-			document.write('<p>js_num <b>==</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
-				((js_num == 20) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'))
-
-			document.write('<p>js_num <b>!=</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
-				((js_num != 20) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'))			
-
-			document.write('<p>js_num <b><</b> 50 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
-				((js_num < 50) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'))
-
-			document.write('<p>-------------------------------------------------...');
-			document.write('<p>OPERADOR TERNÁRIO com EXPRESSÃO ARITIMÉTICA:');
-			
-			document.write('<p>(js_num <b>-</b> 20) <b>==</b> 0 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
-				((js_num - 20)==0) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>')
-
-
-			/* Início da estrutura de Seleção switch...case*/
+			/* */
 
 			
 

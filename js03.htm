@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>js04_Salario2.htm - do...while</title>
+		<title>js04_for.htm - incondicional for</title>
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
 		<meta charset="utf-8">
 
@@ -15,96 +15,29 @@
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
 			<!--
-			/* Objetivo:Calcular o salário líquido de um 
+			/* Objetivo:Aplicação do Laço Incondicional <for>, incrementando +2 na variável js_num e apresentando os valores
+			acumulados de 1 a 10.
 				
-			*/
-			document.write("olá ")
+			
 			/* Definição das variáveis */
-			var js_qht; //var de entrada - Quantidade de Horas Trabalhadas
-			var js_vht; // var de entrada - Valor de Horas trabalhadas
-			var js_inss; // Var de entrada - Percentual de Desconto INSS
-			var js_tdes; // Var de saída - Total de Descontos
-			var js_sb; // var de saída - Valor do Salário Bruto
-			var js_sl;	// Var de saída - Valor de Salário Liquído		
-			var js_resposta = true;
+			var js_num; 
+			
+			document.write('<p>Apresentação dos valores acumulados para js_num=1 e menor ou igual a 10 incrementando a variável de +=2');
+			document.write('<p>(Note que o limite irá até 9, pois 9 + 2 = 11, portanto será maior do que 10)');
 
-			do{
-
-
-				/* Entrada de Dados */
-				js_qht= parseFloat(window.prompt('Informe a Quantidade de horas trabalhadas/mês: (135 a 180) ', '00'));
-				js_vht= parseFloat(window.prompt('Informe o Valorda hora trabalhada: (25 a 50)', '00'));
-				js_inss= parseFloat(window.prompt('Informe o Percentualde desconto INSS: (5 a 15)', '00'));
-
-				/* Processamento de dados */
-				js_sb = js_vht * js_qht;
-				js_tdes = (js_inss/100) * js_sb;
-				js_sl = js_sb - js_tdes;
-
-				/* Saída de Dados com Consistencia de Valores*/
-				document.write('<p><b>DEMOSTRATIVO PARA CÁLCULO DO SALÁRIO LÍQUIDO</b> ');
-
-				document.write('<p>Quantidade de horas Trabalhadas (135 a 180) => <b>' + js_qht + '</b>');
-
-				if (js_qht > 180){
-					document.write('...(<b>Valor Máximo Exedido</b>)');
-
+				/* Aplicação do Laço Incondicional - for */
+				for (js_num=1; js_num<=10; js_num+=2){
+					document.write('<p>' + js_num)
 				}
-				if (js_qht < 135){
-					document.write('...(<b>Valor Mínimo Inválido</b>)');
-				}
-
-				document.write('<p>Valor de hora Trabalhada (25 a 50) => <b>' + js_vht+ '</b>');
-
-				if (js_qht > 50){
-					document.write('...(<b>Valor Máximo Exedido</b>)');
-				}
-
-				if (js_qht < 25){
-					document.write('...(<b>Valor Mínimo Inválido</b>)');
-				}
-
-				document.write('<p>Percentual de Desconto INSS (5 a 15) => <b>' + js_inss + '</b>');
-
-				if (js_qht > 15){
-					document.write('...(<b>Valor Máximo Exedido</b>)');
-				}
-
-				if (js_qht < 5){
-					document.write('...(<b>Valor Mínimo Inválido</b>)');
-				}
-
 				
-				document.write('<p><b>Salário Bruto = </b>' + js_sb);
-				document.write('<p><b>Total de Descontos INSS = </b>' + js_tdes);
-				document.write('<p><b>Salário LÍQUIDO = </b>' + js_sl);
+				/* */
+				
+				/* */
+				
 
-				/* Saída de Dados com Aninhamento de if */
-				if (js_sl > 10500){
-					document.write('...(<b>Salário Elevado! </b> maior que 10.500)');
-				}
-				else{
-					if (js_sl > 6000){
-					document.write('...(<b>Salário Satisfatório! </b> maior que 6.000)');
-					}
-					else{
-						if (js_sl > 3000){
-							document.write('...(<b>Salário Moderado! </b> Maior que 3.000)');
-						}
-						else{
-							document.write('...(<b>Salário Insatisfatório! </b> menor ou igual a 3.000)');
-						}
-					}
-				}	
-
-
-				document.write('<p> ============================================================');
-
-				js_resposta = window.confirm('Deseja continuar?')
-
-			}
-
-		while (js_resposta == true); 
+				/* */
+				
+		
 
 		//-->
 

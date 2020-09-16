@@ -4,36 +4,60 @@
 
 	<head>
 
-		<title>js04_for.htm - incondicional for</title>
+		<title>js04_UpperlowerCase.htm - conversão de string</title>
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
 		<meta charset="utf-8">
 
 	</head>
 
 	<body>
+		<!-- Linha de comentário HTML: Entrada de Dados via Formulário -->
+		<h3>Formulário de Consulta de Curso</h3>
+		<p>
+		<form name="formcurso" action="" method="post">
+			Digite seu Curso: <input type="text" name="f_curso" size="8" maxlength="4" > (SIST) <p></p>
+			<input type="button" name="btn_validar" value="Validar" onclick="cadcurso()">
+			<input type="reset" name="btn_cancelar" value="Cancelar"><p></p>
+
+		</form>
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
 			<!--
-			/* Objetivo: Devp;ver um programa que faça o teste de execução de duas opções.
-				Utilizando o método confirm, verificar o botão selecionado pelo usuário e apresentar a opção selecionada. 
-				
+			/* Objetivo: Capturar o nome do curso e apresentar o código correspondente
+				verificar:
+				se js_curso for igual a SIST, apresentar p código "SIST001/F8"
+					Caso contrário, apresentar a mensagem "Curso inválido".
+
+				Objetos e Métodos:
+					Entrada: document.form
+					Saída: document.form (para cógigo válido no campo de saída do formulário)
+					Saída: window.alert (para código inválido por janela de alerta)
+				Formulário: formcurso
+				Função: cadcurso
+				Evendo: onclik
 			
 			/* Definição das variáveis */
-			var js_resp; 
+			var js_curso;
+
 			
-			    /* Após o botão selecionado, js_resp rceberá um valor lógico true ou false, capturado pelo método confirm */
+		 	/* Função cadcurso() */
+		 	function cadcurso(){
+		 		js_curso= document.formcurso.f_curso.value;
+		 		if(js_curso.toUpperCase()=='SIST'){
+		 			document.formcurso.f_curso.value='SIST001/FB';
+		 		}// fechamento da estrutura if
+		 		else{
+		 			window.alert('Curso Inválido');
+		 		}// fechamento da estrutura else
+		 	}// fechamento da função 
 
-			    js_resp = window.confirm('Clique em um dos dois botões. ')
+		
 
 
-				/* Decisão Condicional Composta if/else comparado ao valor lógico true */
-				if (js_resp == true){
-					document.write('Você acionou o botão: <b>Ok</b>!!!');
-				}
-				else{
-					document.write('Você acionou o botão: <b>Cancelar</b>!!!');
-				}
+		 	/* */
+			
+			
 				
 				
 				

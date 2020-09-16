@@ -11,58 +11,47 @@
 	</head>
 
 	<body>
-
-		<!-- Linha de comentário HTML: Definição do elemento formulário para a Entrada de Dados em HTML -->
-		<form name="formcalend" action="" method="post"> 
-
-			Digite o mês (01 a 12): <input type="text" name="f_mes" size="4" maxlength="2"><p></p>
-			<input type="button" name="btn_processar" value="Processar" onclick= "verificames()">
-			<input type="reset" name="btn_cancelar" value="Cancelar"><p></p>
-			O Mês corresponde é: <input type="text" name="f_nomemes" size="18" maxlength="15">
-
-		</form>
-
-
-
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
-			/* Objetivo: Utilizando o recurso de seleção multipla - switch...case, pesquisar o nome do mês de referência através do 
-			respectivo número do mês informado.
-			- Objetivos/Métodos utilizados:
-			Entrada: document.form (entrada de daods via formulário)
-			Saída: document.form (Saída de dados via formulário)
-			- Importante:
-				Os campos do formulário seráo identificados com o prefixo f_ => Exemplo: f_mes
-				Os campos do JavaScript serão identificados com o prefixo js_ => Exemplo: js_mes
+			/* Objetivo: 
+				Exemplos práticos de aplicação com Operador Ternário: Operadores Relacionais e Expressão aritimética.
+				Utilização de sintaxe: (<condição>)? <expressão para resultado verdadeiro> : <expressão para resultado falso>
 			*/
 
 			/* Definição das variáveis */
-			var js_mes;
+			document.write('<p>-------------------------------------------------...');
+			document.write('<p>DEFINIÇÃO E ATRIBUIÇÃO DE VARIÁVEIS:');
+			document.write('<p>var js_num = <b>30</b>; (js_num recebe valor 30)');
+			var js_num = 30;
 				
-			function verificames(){
-			/* Início da função verificames() para captura dos dados do formulário e pesquisa por seleção multipla*/
-			js_mes = parseInt(document.formcalend.f_mes.value);
+			
+			/* Aplicação de Operados Ternário utilizando Operadores Relacionais*/
+			document.write('<p>-------------------------------------------------...');
+			document.write('<p>OPERADOR TERNÁRIO <b>(? :)</b> com OPRERADORES RELACIONAIS (==, !=, <):');
+
+			document.write('<p>js_num <b>==</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
+				((js_num == 20) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'))
+
+			document.write('<p>js_num <b>!=</b> 20 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
+				((js_num != 20) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'))			
+
+			document.write('<p>js_num <b><</b> 50 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
+				((js_num < 50) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>'))
+
+			document.write('<p>-------------------------------------------------...');
+			document.write('<p>OPERADOR TERNÁRIO com EXPRESSÃO ARITIMÉTICA:');
+			
+			document.write('<p>(js_num <b>-</b> 20) <b>==</b> 0 <b>?</b> "SIM" <b>:</b> "NÃO - Resposta => ');
+				((js_num - 20)==0) ? document.write('<b>SIM</b>') : document.write('<b>NÃO</b>')
+
 
 			/* Início da estrutura de Seleção switch...case*/
-			switch(js_mes){
-				case 1: document.formcalend.f_nomemes.value = 'Janeiro'; break
-				case 2: document.formcalend.f_nomemes.value = 'Fevereiro'; break
-				case 3: document.formcalend.f_nomemes.value = 'Março'; break
-				case 4: document.formcalend.f_nomemes.value = 'Abril'; break
-				case 5: document.formcalend.f_nomemes.value = 'Maio'; break
-				case 6: document.formcalend.f_nomemes.value = 'Junho'; break
-				case 7: document.formcalend.f_nomemes.value = 'Julho'; break
-				case 8: document.formcalend.f_nomemes.value = 'Agosto'; break
-				case 9: document.formcalend.f_nomemes.value = 'Setembro'; break
-				case 10: document.formcalend.f_nomemes.value = 'Outubro'; break
-				case 11: document.formcalend.f_nomemes.value = 'Novembro'; break
-				case 12: document.formcalend.f_nomemes.value = 'Dezembro'; break
-		default: document.formcalend.f_nomemes.value = '** Mês Inválido! ** '; break
 
-			}
+			
 
-		}	
+			
+			
 		</script>
 
 	</body>

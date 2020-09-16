@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>js04_while.htm - condicional while</title>
+		<title>js04_while2.htm - condicional while</title>
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
 		<meta charset="utf-8">
 
@@ -14,26 +14,26 @@
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
-			/* Objetivo: Escrever uma mensagem limitando-a em 10 vezes através de um contador que será incrementado de mais 1
+			/* Objetivo: Executar uma sequência de comandos por uma quantidade indeterminada de vezes utilizando uma variável de controle
+			(valor lógico = True, por exemplo) no lugar de contadores delimitadores. O poder ser feito um controle através de perguntas na tela,
+			utilizando o método confirm (OK ou Cancelar, por exemplo).
 				
 			*/
 
 			/* Definição das variáveis */
 			var js_contador = 1;
-				
+			var js_resposta = true; 	
 			
 			/* Laço de Repetição Condicional - while*/
-			while (js_contador <= 10){
+			while (js_resposta == true){
 				document.write('<p>' + js_contador + '&ordf; Repetição de uma única linha de comando dentro de um laço condicional');
 				js_contador += 1;
+				js_resposta = window.confirm('Deseja continuar?')
 			}
 
-			/* */
+			/*Se eu quiser que print sempre que eu der o ok e não no final? */
 
-			
-
-			
-			
+								
 		</script>
 
 	</body>

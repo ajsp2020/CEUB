@@ -18,7 +18,7 @@
 			Digite seu Curso: <input type="text" name="f_curso" size="8" maxlength="4" > (SIST) <p></p>
 			<input type="button" name="btn_validar" value="Validar" onclick="cadcurso()">
 			<input type="reset" name="btn_cancelar" value="Cancelar"><p></p>
-
+			Código do curso: <input type="text" name="f_codcurso" size="15" maxlength="10">
 		</form>
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
@@ -45,7 +45,7 @@
 		 	function cadcurso(){
 		 		js_curso= document.formcurso.f_curso.value;
 		 		if(js_curso.toUpperCase()=='SIST'){
-		 			document.formcurso.f_curso.value='SIST001/FB';
+		 			document.formcurso.f_codcurso.value='SIST001/FB';
 		 		}// fechamento da estrutura if
 		 		else{
 		 			window.alert('Curso Inválido');

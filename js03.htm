@@ -4,7 +4,7 @@
 
 	<head>
 
-		<title>js04_while2.htm - condicional while</title>
+		<title>js04_Salario2.htm - do...while</title>
 		<meta http-equiv="Content-Type" content="text/html; charset= utf-8">
 		<meta charset="utf-8">
 
@@ -14,26 +14,100 @@
 		<!-- script language= "javascript" was used in very old browsers, and is deprecated -->
 		<!-- is the HTML 4 standard -->
 		<script type="text/javascript">
-			/* Objetivo: Executar uma sequência de comandos por uma quantidade indeterminada de vezes utilizando uma variável de controle
-			(valor lógico = True, por exemplo) no lugar de contadores delimitadores. O poder ser feito um controle através de perguntas na tela,
-			utilizando o método confirm (OK ou Cancelar, por exemplo).
+			<!--
+			/* Objetivo:Calcular o salário líquido de um 
 				
 			*/
-
+			document.write("olá ")
 			/* Definição das variáveis */
-			var js_contador = 1;
-			var js_resposta = true; 	
-			
-			/* Laço de Repetição Condicional - while*/
-			while (js_resposta == true){
-				document.write('<p>' + js_contador + '&ordf; Repetição de uma única linha de comando dentro de um laço condicional');
-				js_contador += 1;
+			var js_qht; //var de entrada - Quantidade de Horas Trabalhadas
+			var js_vht; // var de entrada - Valor de Horas trabalhadas
+			var js_inss; // Var de entrada - Percentual de Desconto INSS
+			var js_tdes; // Var de saída - Total de Descontos
+			var js_sb; // var de saída - Valor do Salário Bruto
+			var js_sl;	// Var de saída - Valor de Salário Liquído		
+			var js_resposta = true;
+
+			do{
+
+
+				/* Entrada de Dados */
+				js_qht= parseFloat(window.prompt('Informe a Quantidade de horas trabalhadas/mês: (135 a 180) ', '00'));
+				js_vht= parseFloat(window.prompt('Informe o Valorda hora trabalhada: (25 a 50)', '00'));
+				js_inss= parseFloat(window.prompt('Informe o Percentualde desconto INSS: (5 a 15)', '00'));
+
+				/* Processamento de dados */
+				js_sb = js_vht * js_qht;
+				js_tdes = (js_inss/100) * js_sb;
+				js_sl = js_sb - js_tdes;
+
+				/* Saída de Dados com Consistencia de Valores*/
+				document.write('<p><b>DEMOSTRATIVO PARA CÁLCULO DO SALÁRIO LÍQUIDO</b> ');
+
+				document.write('<p>Quantidade de horas Trabalhadas (135 a 180) => <b>' + js_qht + '</b>');
+
+				if (js_qht > 180){
+					document.write('...(<b>Valor Máximo Exedido</b>)');
+
+				}
+				if (js_qht < 135){
+					document.write('...(<b>Valor Mínimo Inválido</b>)');
+				}
+
+				document.write('<p>Valor de hora Trabalhada (25 a 50) => <b>' + js_vht+ '</b>');
+
+				if (js_qht > 50){
+					document.write('...(<b>Valor Máximo Exedido</b>)');
+				}
+
+				if (js_qht < 25){
+					document.write('...(<b>Valor Mínimo Inválido</b>)');
+				}
+
+				document.write('<p>Percentual de Desconto INSS (5 a 15) => <b>' + js_inss + '</b>');
+
+				if (js_qht > 15){
+					document.write('...(<b>Valor Máximo Exedido</b>)');
+				}
+
+				if (js_qht < 5){
+					document.write('...(<b>Valor Mínimo Inválido</b>)');
+				}
+
+				
+				document.write('<p><b>Salário Bruto = </b>' + js_sb);
+				document.write('<p><b>Total de Descontos INSS = </b>' + js_tdes);
+				document.write('<p><b>Salário LÍQUIDO = </b>' + js_sl);
+
+				/* Saída de Dados com Aninhamento de if */
+				if (js_sl > 10500){
+					document.write('...(<b>Salário Elevado! </b> maior que 10.500)');
+				}
+				else{
+					if (js_sl > 6000){
+					document.write('...(<b>Salário Satisfatório! </b> maior que 6.000)');
+					}
+					else{
+						if (js_sl > 3000){
+							document.write('...(<b>Salário Moderado! </b> Maior que 3.000)');
+						}
+						else{
+							document.write('...(<b>Salário Insatisfatório! </b> menor ou igual a 3.000)');
+						}
+					}
+				}	
+
+
+				document.write('<p> ============================================================');
+
 				js_resposta = window.confirm('Deseja continuar?')
+
 			}
 
-			/*Se eu quiser que print sempre que eu der o ok e não no final? */
+		while (js_resposta == true); 
 
-								
+		//-->
+
 		</script>
 
 	</body>

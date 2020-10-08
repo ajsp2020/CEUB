@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title></title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+        <script type="text/javascript" src="{% static 'web/arquivos.js' %}"></script>
+        <link href="{% static 'web/styles.css' %}" rel="stylesheet">
+       
+    <body>
+        <header>
+
+            <div class="T_1">
+
+            <h2 id="in_1">Programação WEB</h2>
+
+            </div>
+
+        </header>
+
+        <main>
+            
+            <div class="B_met_1">
+                <!--Inicio tag -->
+                <div class="Tag" sty>
+                       <a href="{% url 'web:index' %} " style="float: right;margin-right: 30px;  ">Index</a>
+                <table class="Table_tag">
+  
+                       <table id="f_tab_2" style="margin-left: 47%;" >
+                       <td></td>
+                       <td><div id="loc"></div></td>
+                       <td>-</td>
+                       <td><div id="reg"></div></td>
+                              
+                </table>
+                
+  
+                </div>
+                <!-- Final da Tag-->
+                {% block body %}
+
+
+                {% endblock %}
+
+                </main>
+            </div> 
+        <footer>
+            <!--Início do footer-->
+            <div class="container">
+            <!--Inicio da tabela do Footer-->
+                <ul class="list-unstyled list-inline text-center py-2"> 
+                    <li class="list-inline-item">
+                        <table id="f_tab_1">
+                            <td></td> 
+                            <td><!--Antonio João da Silva Pereira--></td>
+                        </table>
+                    </li> 
+                    
+                    </li>  
+                </ul>
+                <!--Copyright-->
+                <div class="footer-copyright text-center py-3">@ 2020 Copyright: 
+                    <a href="{% url 'web:metodologia' %}">AJP.com</a>
+                </div>
+            <!--Final da tabela do footer-->
+            </div>
+               
+            <!--Final do Footer-->
+        </footer>
+    
+       
+    </body>
+</html>

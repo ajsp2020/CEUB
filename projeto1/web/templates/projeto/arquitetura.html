@@ -1,0 +1,38 @@
+{% extends "projeto/layout.html" %}
+{% load static %}         
+{% block body %}
+<div style="background-color:snow;">   
+<h4 style="text-align: center; margin-top: 30px;">ARQUITETURA</h4>
+<img id="img_arq_1" src="{% static 'web/imagens/imagem3.png' %}" >
+<div>
+      <p class= "t_arq_1" style="margin-left: 650px; height: auto; margin-right: 20px;">
+            
+      O site em questão <a style="color: black;" href="https://br.advfn.com/bolsa-de-valores/bovespa">(https://br.advfn.com/bolsa-de-valores/bovespa)</a> é escrito com a utilização do recurso HTML (Linguagem de Marcação de Hipertexto)</a>, que é o bloco básico de construção da web, para dar interatividade a página foi usado a linguagem de programação Java Script e para dar o estilo da página foi utilizado a linguagem CSS. O site estruturado de uma forma bem básica utilizando o elemento DIV para sua divisão.
+      O site em questão (https://br.advfn.com/bolsa-de-valores/bovespa) é escrito com a utilização do recurso HTML (Linguagem de Marcação de Hipertexto), que é o bloco básico de construção da web. Para dar interatividade a página, foi usado a linguagem de programação Java Script e para dar o estilo da página foi utilizado a linguagem CSS. Este site é estruturado de uma forma bem básica utilizando o elemento DIV para sua divisão, além do uso de gráficos e tabelas. O site também contém a estrutura básica de qualquer site como o &lt;html&gt; que é a tag inicial, o &lt;head&gt; que possui as informações gerais do site, o &lt;title&gt; cuja a função é informar o título da página na barra do navegador e o &lt;body&gt; que é o local no qual apresenta de fato o conteúdo da página. Além dos recursos já mencionados, o autor do site decidiu, apresentar os dados em forma de tabela onde estas são atualizadas constantemente através de uma API ou “Application Programming Interface”, que nada mais é que um conjunto de rotinas e padrões de programação, sendo utilizado em plataformas que são baseadas na web ou até mesmo em aplicativos de software.
+      Já para encontrar seu servidor, com a URL do site, na prompt de comando encontrei seu IP 104.31.15.178 e com isso descobri que a distribuição provida pela Cloudflare, Inc. com sede nos Estados Unidos e que, entre outras coisas, fornecem o serviço de servidor para esses domínios. 
+      </p>
+
+      </div>
+      <div style="margin-top: 20px; margin-bottom: 20px;">
+            <img id="img_arq_2" src="{% static 'web/imagens/imagem4.png' %}">
+            <p class="t_arq_1" style="margin-right: 650px; height: auto; margin-left: 20px;">
+
+            Para resumir, esse site funciona da seguinte maneira:
+            Começando com a primeira tag, na &lt;head&gt;. conseguimos encontrar todas as tags que se espera em um site básico como a &lt;meta&gt; que pode especificar, o conjunto de caracteres, a descrição da página, como no &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8"&gt; , utilizada em HTML5 o tipo de recurso de mídia e também seus caracteres, sendo UTF-8 muita utilizada pois possui quase todos os caracteres e símbolos do mundo. 
+            Permanecendo na primeira, temos ainda funções de &lt;script&gt;, utilizado aqui de uma forma muito interessante, visto que, pelo site não é brasileiro, o autor, se utilizou de uma API para encontrar a localização do cliente. Para entender melhor o funcionamento de um API, pensamos em uma API como um dic{} do Python, com uma {“chave”: “valor”}. Para conseguirmos utilizar esses dados é necessário a criação de uma função em javascript que, sobre algumas condições, vai buscar a API em um determinado domínio (nesse caso, https://onetag-geo.s-onetag.com/), em nossa função colocamos “key”, que estamos procurando, no caso desse site “Country” retorna  com um valor para dada chave, neste caso “BR”. Com esse valor o site é capaz de identificar em qual região estamos e através de outra função direciona o usuário para determinado app , no caso Bovespa.
+
+            </p>
+      </div>
+
+      <div >
+            <p class= "t_arq_" style="margin-left: 20px; height: auto; margin-right: 20px; margin-top: ;">
+
+                  Já no &lt;body&gt; o autor usou do artifício das DIVs (containers) &lt;div&gt; separando o &lt;body&gt; em quatro partes principais. Em seguida, para melhor identificar essas divs, foi dado para elas identidades ou classes( “id”, e “class”), com a  finalidade facilitar sua identificação e manipulação. Através dessas divs, e com o auxílio do CSS, 
+                  o autor conseguiu alterar a página de forma a, definir seu tamanho, cor de fundo, além de manipular as posições que lhe conferem. Tal tipo de artifício foi utilizado por toda a página. Para finalizar, o que posso destacar no body é a forma que as informações são atualizas nas tabelas. Para evitar ter que manualmente adicionar os dados, visto que 
+                  se repetem várias vezes, o autor se utilizou uma função do JavaScript que consegue pegar uma variável e aplicar seu valor dentro de qualquer contêiner com dada identidade. Esse recurso é utilizado com frequência no site que com o uso das API se consegue uma atualização constante de suas informações. 
+            </p>
+      </div>
+</div>
+
+{% endblock %}
+

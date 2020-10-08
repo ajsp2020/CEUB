@@ -1,0 +1,172 @@
+/*
+h2{
+    color:red;
+    text-align: center;
+}
+body{
+    background-color: whitesmoke;
+    
+}
+    
+
+@keyframes grow {
+    from {
+        left: -100%;
+    }
+    to {
+       left: 0%;
+    }
+}
+.tabela_main {
+    position: relative;
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    
+}
+#principal {
+    
+    background-color: green;
+    width: 100%;
+    padding:1px;
+    
+}    
+#principal > a:hover {
+    color: blue;
+}
+
+.tabela1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    
+}
+
+
+.titulo1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color : black;
+    text-align: center;
+    
+    
+}
+
+#inicial{
+    font-size: 30px;
+}
+
+ul > li {
+    color: black;
+}
+
+ol {
+    color: red;
+}
+
+a {
+    color:red;
+}
+a:hover {
+    color: blue;
+}
+
+@media (min-width: 600px) {
+    
+}
+
+@media (max-width: 599px){
+
+}
+
+#conteiner {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#conteiner > div {
+    background-color: blue;
+    font-size: 20px;
+    margin: 50px;
+    padding: 20px;
+    width: 350px;
+    color: white;
+    text-align: center;
+}
+#conteiner > div:hover {
+    background-color: darkblue;
+}
+
+.local {
+    color: blue;
+    font-size: 20px; 
+    width: 30%;
+    bottom: 100px;
+    text-align: center;
+    position: fixed;
+    margin-left: 43%;
+    
+}
+.local2 {
+    color: blue;
+    font-size: 20px; 
+    width: 30%;
+    bottom: 75px;
+    text-align: center;
+    position: fixed;
+    margin-left: 40%;
+    
+}
+
+.footer_container {
+    position: absolute;
+  
+    bottom: 0;
+    width: 100%;
+    
+}
+.footer_tabela {
+    color: black;
+    list-style-type: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+.footer_ul{
+    list-style-type: none;
+    background-color: whitesmoke;
+    padding: 30px;
+}
+
+#imgBanner {
+    display: inline;
+    padding: 0px;
+    margin: 30px;
+    float: right;
+    position: relative;
+    
+    
+    
+}
+    
+    
+.tag {
+    background-color: lightgrey;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+footer {
+    clear: both;
+    position: relative;
+    height: 200px;
+    margin-top: -200px;
+}
+
+
+*/

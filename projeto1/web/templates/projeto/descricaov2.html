@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script type="text/javascript" src="{% static 'web/arquivos.js' %}"></script>
+        <link href="{% static 'web/styles.css' %}" rel="stylesheet">
+<script>
+
+            function showSection(section) {
+                
+                fetch(`/web/sections/${section}`)
+                .then(response => response.text())
+                .then(text => {
+                    console.log(text);
+                    document.querySelector('#content').innerHTML = text;
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('button').forEach(button => {
+                    button.onclick = function() {
+                        showSection(this.dataset.section);
+                    };
+                });
+            });
+        </script>
+    </head>
+    <body>
+      <header>
+
+            <div class="T_1">
+
+            <h2 id="in_1">Programação WEB</h2>
+
+            </div>
+
+        </header>
+
+<main>
+            
+            <div class="B_met_1">
+                <!--Inicio tag -->
+                <div class="Tag" sty>
+                       <a href="{% url 'web:index' %} " style="float: right;margin-right: 30px;  ">Index</a>
+                <table class="Table_tag">
+  
+                       <table id="f_tab_2">
+                       <td></td>
+                       <td><div id="loc"></div></td>
+                       <td>-</td>
+                       <td><div id="reg"></div></td>
+                              
+                </table>
+                
+  
+                </div>
+
+            </div>
+           
+            <div class=""> 
+                
+                <div class="">
+                    <img src="{% static 'web/imagens/imagem1.jpg' %}" class="rounded float-left" alt="..." style="margin-top: 30px; height: 400px;">
+                    <img src="{% static 'web/imagens/imagem2.jpg' %}" class="rounded float-right" alt="..." style="margin-top: 30px;height: 400px;">
+                </div>
+                
+            </div>
+                <!-- Final da Tag-->
+      <div id = "table_des2_1" style="text-align: center;margin-top: 30px;">
+        <h4>DESCRIÇÃO DO WEBSITE</h4><p></p>
+        <button data-section="1"><b>Visão Geral</b></button>
+        <button data-section="2"><b>Facilidades de uso</b></button>
+        <button data-section="3"><b>Lista de Features</b></button>
+        <button data-section="4"><b>Aplicação e Benefícios</b></button>
+        <button data-section="5"><b>Área/Nicho</b></button>
+            
+        <div id="content" style="margin-left: 400px; margin-right: 410px; margin-top: 50px;">
+        </div>
+      </div>
+</main> 
+        <footer>
+            <!--Início do footer-->
+            <div class="container">
+            <!--Inicio da tabela do Footer-->
+                <ul class="list-unstyled list-inline text-center py-2"> 
+                    <li class="list-inline-item">
+                        <table id="f_tab_1">
+                            <td></td> 
+                            <td><!--Antonio João da Silva Pereira--></td>
+                        </table>
+                    </li> 
+                    
+                    </li>  
+                </ul>
+                <!--Copyright-->
+                <div class="footer-copyright text-center py-3">@ 2020 Copyright: 
+                    <a href="{% url 'web:metodologia' %}">AJP.com</a>
+                </div>
+            <!--Final da tabela do footer-->
+            </div>
+               
+            <!--Final do Footer-->
+        </footer>
+    
+
+
+    </body>
+</html>

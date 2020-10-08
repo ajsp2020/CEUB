@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\ESTRUTURA DE DADOS"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\CURSOS"
+		},
+		{
+			"path": "..\\..\\..\\..\\.."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\CURSOS"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"ostream": "cpp",
+			"iostream": "cpp"
+		},
+		"liveServer.settings.multiRootWorkspaceName": "PROGRAMAÇÃO WEB",
+		"editor.fontSize": 16,
+		"editor.tabSize": 6
+	}
+}

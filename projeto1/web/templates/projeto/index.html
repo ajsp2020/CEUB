@@ -1,0 +1,156 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <script type="text/javascript" src="{% static 'web/arquivos.js' %}"></script>
+        <link href="{% static 'web/styles.css' %}" rel="stylesheet">
+    </head>
+    <body>
+
+        <header>
+
+            <div class="T_1">
+
+            <h2 id="in_1">Projeto 01</h2>
+
+            </div>
+            
+
+        </header>
+  
+    <main> 
+        
+        <div class="B2">
+            <!--Inicio tag -->
+            <div class="Tag">
+                
+                
+                    <a href="{% url 'web:videos' %} " style="float: right;margin-right: 5px;  ">&nbsp; Videos</a>
+                    <a href="{% url 'web:dadosgerais' %} " style="float: right;margin-right: 5px;  "> &nbsp; Dados do Grupo |</a>
+                    <a href="https://drive.google.com/file/d/1-Deq6wcjGSpeg1w2wCazd7VETgR-JON1/view?usp=sharing" style="float: right;">&nbsp;  Links &nbsp; |</a>
+                    <a href="https://docs.google.com/document/d/19bTJcEMgDGtUGipcfvDMxF9SICbemobApnCd2XsxVDA/edit" style="float: right;">Docs &nbsp; |</a>
+                <table class="Table_tag">
+
+                        <table id="f_tab_2" style="margin-left: 47%;">
+                        <td></td>
+                        <td><div id="loc"></div></td>
+                        <td>-</td>
+                        <td><div id="reg"></div></td>
+                              
+                </table>
+
+            </div>
+            <!-- Fim da tag-->
+
+            <!-- Início do Bloco 3 -->
+            <div class="B3"> 
+                
+                <!--Inicio bloco a direita-->
+                <div class="B_img_1">
+                    <img id="imgBanner" src="{% static 'web/imagens/foto3.jpg' %}">
+                </div>
+                <!--Final bloco a direita-->
+
+                <!--Inicio bloco a esquerda-->
+                <div class="B_str_1">
+
+                    <ol class="T_main">
+                        <div id="tabela1">
+                            <li><a a href="{% url 'web:descricao' %}"> <b>Descrição do website:</b></a>
+                                <p></p>
+                                <ul>
+                                    <li>Endereço do projeto;</li>
+                                    <li>Tema/área/objetivo do website/ serviço de Internet;</li>
+                                    <li>Descrição em alto nível dos modelos de interação com o usuário;</li>
+                                </ul>
+                            </li>
+                        </div>
+
+                        <p></p>
+                        <div id="tabela2">
+                            <li><a href="{% url 'web:metodologia' %}"><b>Metodologia de análise:</b></a> 
+                                <p></p>
+                                <ul>
+                                    <li>Cronograma de execução das análises. Quem fez o que e quando;</li>
+                                    <li>Métodologia de registro das análises;</li>
+                                </ul>
+
+                            </li>
+                        </div>
+
+                        <p></p>
+                        <div id="tabela3">
+                        <li><a href="{% url 'web:descricaov2' %}"><b>Descrição do website:</b></a>
+                            <p></p>
+                            <ul>
+                                <li><b>Visão geral:</b> descreva como é a interação/navegação.</li>
+                                <li><b>Facilidade de uso:</b> é facil usar? Como é a interação? Como voce avaliou esse aspecto?</li>
+                                <li><b>Lista de features:</b> quais os serviços oferecidos pelo website?</li>
+                                <li><b>Aplicações e benefícios</b> quais benefícios trazidos pela utilização do serviço.</li>
+                                <li><b>Área/nicho:</b> Contexto mercadológico do serviço.</li>
+                            </ul>
+
+                        </li>
+                        </div>
+
+                        <p></p>
+                        <div id="tabela4">
+                            <li><a a href="{% url 'web:arquitetura' %}"><b>Arquitetura:</b></a> <p></p>
+                                
+                                <ul>
+                                    <li>Como funciona o serviço. Qual o servidor Web? Qual a linguagem de 
+                                        programação? Como é a interação?</li>
+                                
+                                </ul>
+                            </li>
+                        </div>
+
+                        <p></p>
+                        <div id ="tabela5">
+                        <li><a href="{% url 'web:comentarios' %}"><b>Comentários:</b></a><p></p> 
+                            
+                            <ul>
+                                <li>Comentários/opiniões sobre a qualidade do serviço.</li>
+                            </ul>
+                          
+                        </li>
+                        </div>
+                    </ol>
+
+                </div>
+                <!--Final do bloco a esquerda-->
+            </div>
+            <!--Final do bloco 3-->
+        </div>   
+    </main>
+
+    <footer>
+        <!--Início do footer-->
+        <div class="container">
+        <!--Inicio da tabela do Footer-->
+            <ul class="list-unstyled list-inline text-center py-2"> 
+                <li class="list-inline-item">
+                    <table id="f_tab_1">
+                        <td></td> 
+                        <td><!--Antonio João da Silva Pereira--></td>
+                    </table>
+                </li> 
+                
+                </li>  
+            </ul>
+            <!--Copyright-->
+            <div class="footer-copyright text-center py-3">@ 2020 Copyright: 
+                <a href="{% url 'web:metodologia' %}">AJP.com</a>
+            </div>
+        <!--Final da tabela do footer-->
+        </div>
+        <!--Final do Footer-->
+    </footer>
+
+    </body>
+    </html>
+    

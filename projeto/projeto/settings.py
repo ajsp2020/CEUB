@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'kk&4ewf1lvgbrfi^@3iy_k-*%19mtd#nrr2t5^as=7=f08j47i'
+SECRET_KEY = 'm8b&t@-^vlo&a2)p=9-yh0le@*-@8lg0mh#@l4muyn&259=t^-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,8 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'movies',
-    'open',
+    'games',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

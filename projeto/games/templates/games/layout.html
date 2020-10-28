@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+    <head>
+
+        <title>Projeto</title>
+
+        <link href="{% static 'games/styles.css' %}" rel="stylesheet">
+        <script type="text/javascript" src="{% static 'games/aquivos.js'%}"></script>
+        <meta charset="UTF-8">
+
+    </head>
+
+    <body>
+
+        {% block body %}
+
+        {% endblock %}
+
+    </body>
+
+</html>

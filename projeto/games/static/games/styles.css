@@ -1,11 +1,14 @@
 /* ALL PAGE CONTAINER */
-
+#page{
+    position: relative;
+}
 
 /* HEADER CONTAINER */
 
 header{
     background-color: black;
     height: 80px;
+    
 }
 #masterhead .wrapper{
     text-align: center;
@@ -92,7 +95,7 @@ header{
 
 /* Change the backgrownd color of the main tag  */
 #mainbar{
-    background-color: darkblue;
+    background-color: rgb(28, 28, 31);
     width: 100%;
     height: 100%;
     position: fixed;
@@ -103,13 +106,13 @@ header{
 
 /* container of text */
 #textbar{
-    background-color: darkblue;
+    background-color: rgb(20, 20, 22);
     margin-left: 10%;
     margin-right: 10%;
     position: relative;
     overflow: scroll;
     scrollbar-width: none;
-    height: 80%;
+    height: 85%;
 }
 /* Changing bootstrap container config (div-row margin)*/
 #div-row{
@@ -124,9 +127,16 @@ section{
 
 /* END MAIN CONTAINER */
 
+/* FOOTER CONTAINER */
 a{
-    color: black;
+    color: white;
 }
 p{
-    color: #000;
+    color: white;
 }
+footer{
+    background-color:rgba(1, 1, 32, 0);
+    margin-top: 20px;
+}
+
+/* END FOOTER CONTAINER */

@@ -1,0 +1,18 @@
+{% extends 'games/layout.html' %}
+
+<!-- Baixando os arquivos estáticos -->
+{% load static %}
+
+{% block body %}
+
+
+    <h1>Jogos</h1>
+    <ul>
+        {% for jogo in jogos %}
+            <li>{{ jogo.id }} - Nome: {{ jogo.nome }}, Estúdio: {{ jogo.desenvolvedor }}</li>
+        {% endfor %}
+
+    </ul>
+
+
+{% endblock %}

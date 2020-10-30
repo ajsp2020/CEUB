@@ -1,0 +1,42 @@
+{% extends 'games/layout.html' %}
+
+<!-- Baixando os arquivos estáticos -->
+{% load static %}
+
+{% block body %}
+
+    <h1>{{ jogo.nome }}</h1>
+
+    <table>
+        <tr>
+            <td>Data de Lançamento inicial:</td>
+            <td>{{jogo.dataLancamento }}</td>
+        </tr>
+        <tr>
+            <td>Desenvolvedor:</td>
+            <td>{{jogo.desenvolvedor }}</td>
+        </tr> 
+            <td>Gêneros:</td>
+            <td>
+                <ul>
+                    {% for genero in generos %}
+                    <li>{{ genero }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+        </tr> 
+            <td>Projetistas: </td>
+            <td>{{ jogo.projetista }}</td>
+        </tr>
+        <td>Plataformas:</td>
+            <td>
+                <ul>
+                    {% for plataforma in plataformas %}
+                    <li>{{ plataforma }}</li>
+                    {% endfor %}
+                </ul>
+            </td>
+    </table>
+
+
+{% endblock %}

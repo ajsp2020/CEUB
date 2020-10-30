@@ -7,7 +7,7 @@
 
 header{
     background-color: black;
-    height: 80px;
+    height: 60px;
     
 }
 #masterhead .wrapper{
@@ -24,14 +24,14 @@ header{
 #navbar{
     overflow: hidden;
     background-color: #333;
-    height: 30px;s
+    height: 40px;s
 }
 #navbar a{
     float: left;
     font-size: 16px;
     color: white;
     text-align: center;
-    padding: 3px 16px;
+    padding: 4px 16px;
     text-decoration: none;
 }
  /* Links inside the navbar */
@@ -52,7 +52,7 @@ header{
     border: none;
     outline: none;
     color: white;
-    padding: 3px 16px;
+    padding: 4px 16px;
     background-color: inherit;
     font-size: inherit;
     margin: 0;
@@ -116,6 +116,9 @@ header{
 }
 /* Changing bootstrap container config (div-row margin)*/
 #div-row{
+    margin-top: 10px;
+}
+#col{
     margin-top: 20px;
 }
 section{

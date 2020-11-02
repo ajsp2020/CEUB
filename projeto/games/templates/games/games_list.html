@@ -4,15 +4,16 @@
 {% load static %}
 
 {% block body %}
+<h1 id="gl_header_h1">Jogos</h1>
 
-
-    <h1>Jogos</h1>
-    <ul>
+    
+    <ul id="gl_ul">
         {% for jogo in jogos %}
+            <a href="{% url 'jogo' jogo.id %}">
             <li>{{ jogo.id }} - Nome: {{ jogo.nome }}, Estúdio: {{ jogo.desenvolvedor }}</li>
+            </a>
         {% endfor %}
 
     </ul>
-
 
 {% endblock %}

@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from django.utils.html import mark_safe
 
-from .models import Jogos
+
+from .models import Jogos, BlogPost
 
 # Create your views here.
 
@@ -17,5 +19,11 @@ def jogo(request, jogo_id):
     return render(request, "games/jogo.html",{
         "jogo": jogo,
         "generos": jogo.generos.all(),
-        "plataformas": jogo.plataformas.all()
+        "plataformas": jogo.plataformas.all(),
+        
     })
+def news(request):
+    qs = BlogPost.objects.all()
+    template_name = 'games/news.html'
+    context = {'object_list': qs}
+    return render(request, template_name, context)

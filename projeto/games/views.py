@@ -23,6 +23,7 @@ def jogo(request, jogo_id):
         
     })
 def news(request):
+ 
     qs = BlogPost.objects.all()
     template_name = 'games/news.html'
     context = {'object_list': qs}

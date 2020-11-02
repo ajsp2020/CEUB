@@ -22,7 +22,7 @@ class Jogos(models.Model):
     
     
     def __str__(self):
-        return f"{self.id}: {self.nome}, {self.desenvolvedor}"
+        return f"{self.nome}"
 
 class Generos(models.Model):
     gen = models.CharField(max_length=64)
@@ -56,9 +56,11 @@ class Imagens(models.Model):
 
 class BlogPost(models.Model):
     # id - Django automatically creates an auto-incrementing primary key for every model!
+ 
     title = models.CharField(max_length=120, null=True, blank=False)
     subtitle = models.CharField(max_length=180, null=True, blank=False)
-    slug = models.CharField(max_length=240, null=True, blank=False)
+    slug = models.CharField(max_length=240, null=True, blank=True)
     body = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True, null=False)
     updated_at = models.DateTimeField(auto_now=True, null=False)
+    nome = models.ForeignKey(Jogos, on_delete=models.CASCADE, null=True)

@@ -175,3 +175,11 @@ ul{
     color: red;
     font-style: italic;
 }
+/* NEWS PAGE */
+
+#news_container p{
+    color: black;
+}
+#news_container a{
+    color: black;
+}

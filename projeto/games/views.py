@@ -7,7 +7,11 @@ from .models import Jogos, BlogPost
 # Create your views here.
 
 def index(request):
-    return render(request, "games/index.html")
+    return render(request, "games/index.html",{
+        "jogos":Jogos.objects.all()
+    })
+
+   
 
 def games_list(request):
     return render(request, "games/games_list.html",{

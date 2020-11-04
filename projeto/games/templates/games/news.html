@@ -2,9 +2,14 @@
 
 <!-- Baixando os arquivos estáticos -->
 {% load static %}
+{% load thumbnail %}
 
 {% block body %}
 
+
+{% thumbnail image '100x100' crop="top" as im %}
+    <img src="{{ im.url }}" alt="">
+{% endthumbnail %}
 
 
 {% for object in object_list %}
@@ -15,6 +20,7 @@
                 <h5 class="card-title"><a href="{{object.slug}}">{{object.title}}</a></h5>
                 <p class="card-text"><small class="text-muted">{{ object.nome }}</small></p>
                 <p class="card-text">{{object.subtitle}}</p>
+                <p class="card-text">{{object.body}}</p>
                 <p class="card-text"><small class="text-muted">Published: {{object.created_at}}</small></p>
             </div>
         </div>

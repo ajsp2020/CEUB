@@ -8,10 +8,6 @@ admin.site.register(Jogos)
 admin.site.register(Generos)
 admin.site.register(Plataformas)
 admin.site.register(Desenvolvedores)
-
-
-
-
 admin.site.register(BlogPost)
 
 class PostAdmin(admin.ModelAdmin):
@@ -36,3 +32,4 @@ admin.site.register(Post, PostAdmin)
 #                 })
 
 #     thumb.allow_tags = True
+

@@ -65,3 +65,6 @@ class Post(models.Model):
                                    quality=100)
             return format_html('<img src="{}" width="{}" height="{}">'.format(_thumbnail.url, _thumbnail.width, _thumbnail.height))
         return ""
+
+
+

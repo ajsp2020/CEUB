@@ -183,3 +183,10 @@ ul{
 #news_container a{
     color: black;
 }
+#published-text {
+    position: absolute;
+}
+#nome-text {
+  position: relative;
+  text-align: right;
+}
